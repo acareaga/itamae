@@ -1,3 +1,27 @@
-<h2 id="title">Welcome to Itamae</h2>
 
-{{outlet}}
+
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h2 class="center" id="title">Itamae</h2>
+    </div>
+
+    <section class="controls">
+      <button id="open-file">Open File</button>
+      <button id="copy-html">Copy HTML</button>
+      <button id="save-file">Save HTML</button>
+    </section>
+
+  </div>
+</nav>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      {{outlet}}
+    </div>
+  </div>
+</div>

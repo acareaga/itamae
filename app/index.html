@@ -9,17 +9,20 @@
 
     {{content-for "head"}}
 
+    <link rel="stylesheet" href="assets/styles/app.css">
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/itamae.css">
 
     {{content-for "head-footer"}}
   </head>
   <body>
-    {{content-for "body"}}
 
-    <script src="assets/vendor.js"></script>
-    <script src="assets/itamae.js"></script>
+      {{content-for "body"}}
 
-    {{content-for "body-footer"}}
+      <script src="assets/vendor.js"></script>
+      <script src="assets/itamae.js"></script>
+
+      {{content-for "body-footer"}}
+
   </body>
 </html>
