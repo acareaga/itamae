@@ -20,7 +20,7 @@ textarea, input, div, button { outline: none; }
   display: flex;
 }
 
-.note-list {
+/*.note-list {
   width: 200px;
   margin-top: 4em;
   min-height: 100vh;
@@ -28,42 +28,44 @@ textarea, input, div, button { outline: none; }
   flex-grow: 1;
   padding: 1em;
   overflow: scroll;
-}
+}*/
 
-.note-list-item {
+/*.note-list-item {
   display: block;
   font-size: 1.1em;
   border: none;
   background-color: rgb(238, 252, 250);
   font-family: monospace;
   white-space: pre;
-}
+}*/
 
-
-///////////////////
-​
 .controls {
-  background-color: rgb(217, 241, 238);
+  background-color: rgb(169, 33, 2);
+  /*rgb(217, 241, 238);*/
+  color: white;
   padding: 1em;
   position: fixed;
   width: 100%;
 }
 ​
-.controls button {
-  background-color: rgb(181, 220, 216);
+.nav-button {
+  background-color: rgb(105, 203, 188);
   border: none;
   font-size: 1.1em;
   padding: 0.5em 1em;
 }
 ​
-.controls button:hover {
+.nav-button hover {
   background-color: rgb(156, 198, 192);
 }
 ​
-.controls button:active {
+.nav-button active {
   background-color: rgb(144, 182, 177);
 }
 ​
+///////////////////
+​
+
 /*.raw-markdown, .rendered-html {
   margin-top: 4em;
   min-height: 100vh;
