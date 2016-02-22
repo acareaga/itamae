@@ -1,8 +1,8 @@
 {
   "name": "itamae",
-  "version": "0.0.0",
-  "description": "Small description for itamae goes here",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Recipe app built with Ember, Electron, and OCR",
+  "private": false,
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -16,16 +16,17 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Aaron Careaga & Jhun de Andres",
   "license": "MIT",
   "devDependencies": {
+    "babel": "6.5.2",
     "broccoli-asset-rev": "^2.2.0",
     "electron-packager": "5.2.1",
     "electron-prebuilt": "0.36.8",
     "ember-ajax": "0.7.1",
     "ember-cli": "2.3.0",
     "ember-cli-app-version": "^1.0.0",
-    "ember-cli-babel": "^5.1.5",
+    "ember-cli-babel": "5.1.6",
     "ember-cli-dependency-checker": "^1.2.0",
     "ember-cli-htmlbars": "^1.0.1",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
@@ -41,6 +42,7 @@
     "ember-inspector": "1.9.5",
     "ember-load-initializers": "^0.5.0",
     "ember-resolver": "^2.0.3",
+    "handlebars": "4.0.5",
     "loader.js": "^4.0.0"
   },
   "main": "electron.js",
