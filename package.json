@@ -80,6 +80,7 @@
     }
   },
   "dependencies": {
+    "ember-cli": "2.3.0",
     "file-bin": "0.2.0"
   }
 }
