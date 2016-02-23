@@ -1,6 +1,12 @@
 <div class="row">
   <br><br><br>
   <div class="col-md-4">
+    <div class="new-note">
+      {{input type="text"
+              placeholder="new note"
+              value = newNoteTitle}}
+      {{#if newNoteTitle}}<button {{action "createNote"}}> New Note </button>{{/if}}
+    </div>
     {{#each model as |note|}}
       {{#link-to 'notes.note' note class="note-list-item"}}
         {{note.id}}
