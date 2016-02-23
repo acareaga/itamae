@@ -26,8 +26,8 @@ body, input {
   width: 200px;
   height: 100vh;
   padding: 1em;
-  background-color: rgb(169, 33, 2);
-  opacity: 0.6;
+  /*background-color: rgb(169, 33, 2);*/
+  /*opacity: 0.6;*/
   box-shadow: 5px 0 10px 1px rgba(174, 185, 185, 0.2);
 }
 
