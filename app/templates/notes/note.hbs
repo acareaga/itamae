@@ -1,8 +1,32 @@
-<div class="note-content">
+<!-- <div class="note-content">
   <h3 class="list-group-item-heading">{{model.id}}</h3>
 
   <p class="list-group-item-text">{{model.content}}</p>
   {{textarea value=model.content}}
 
   {{#if model.hasDirtyAttributes}}<button{{action 'saveNote' on='click'}}> Save Receipe </button>{{/if}}
+
+  <br>
+  <div class="row">
+    <button class="nav-button" id="open-file">Open Image</button>
+    <button class="nav-button" id="copy-html">Crop Text</button>
+    <button class="nav-button" id="save-file">OCR Recipe</button>
+  </div>
+  <br>
+</div>
+ -->
+
+
+<div class="note-content">
+  <h3>{{model.id}}</h3>
+
+  <p>{{model.content}}</p>
+
+  {{textarea value=model.content}}
+
+  {{#if model.hasDirtyAttributes}}<button {{action 'saveNote' on='click'}}>Save Note</button>{{/if}}
+
+    <!-- <button class="nav-button" id="open-file">Open Image</button>
+    <button class="nav-button" id="copy-html">Crop Text</button>
+    <button class="nav-button" id="save-file">OCR Recipe</button> -->
 </div>

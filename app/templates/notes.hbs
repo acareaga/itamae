@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <br><br><br>
   <div class="col-md-4">
     <div class="new-note">
@@ -19,4 +19,28 @@
     {{outlet}}
   </div>
 
+</div> -->
+
+<div class="note-list">
+  <br><br>
+
+  <div class="new-note">
+      <form {{action 'createNote' on="submit"}}>
+      {{input type="text"
+              placeholder="New Note Title"
+              value=newNoteTitle
+              submit="createNote"}}
+      </form>
+      {{#if newNoteTitle}}<button {{action 'createNote'}}>Create</button>{{/if}}
+    </div>
+
+    <br>
+
+  {{#each model as |note|}}
+    {{#link-to 'notes.note' note class="note-list-item"}}
+      {{note.id}}
+    {{/link-to}}
+  {{/each}}
 </div>
+
+{{outlet}}
