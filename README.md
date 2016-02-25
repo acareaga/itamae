@@ -2,33 +2,54 @@
 
 ## Description
 
-The `itame` module provides and easy to integrate digital recipe app built with Ember, Electron, and Optical Character Recognition.
+The `itamae` app is an easy to use digital recipe app built with Ember, Electron, and Optical Character Recognition.
 
 An itamae (板前) is a cook in a Japanese kitchen and can be translated literally as "in front of the [cutting] board."
 
 ## Installation
 
-With [npm](https://www.npmjs.com/) do:
+Clone repository and install dependencies:
 
 ```
-npm install itamae
+$ git clone git@github.com:acareaga/itamae.git
+$ cd tetris
+$ npm install
 ```
 
 ## Usage
 
+Fire up a development server:
+
+```
+npm start
+```
+
+Once the server is running, you can visit:
+
+* `http://localhost:8080/webpack-dev-server/` to run the application.
+* `http://localhost:8080/webpack-dev-server/test.html` to run the test suite in the browser.
+
+To build the static files:
+
+```js
+`ember build` (development)
+`ember build --environment production` (production)
+```
+
+To run tests in Mocha:
+
+```js
+mocha
+```
 
 ## Dependencies
 
 Uses with the following versions:
 
 ```
-"chai": "3.4.1",
-"mocha": "2.3.4",
+"ember-cli": "2.3.0",
+"file-bin": "0.2.0"
 ```
-
-## Built with `itamae`
-
-If you're integrating the module in a creative way, please submit a pull request so your application can be featured above.
 
 ## Contributing
 
@@ -43,7 +64,6 @@ Features that would be nice to include:
 
 Please open an issue if you have any other updates that would be nice to have.
 
-
 ## License
 
-The `itamae` module is released under the [MIT license](https://opensource.org/licenses/MIT).
+The `itamae` codebase is released under the [MIT license](https://opensource.org/licenses/MIT).
