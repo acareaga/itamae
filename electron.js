@@ -7,9 +7,12 @@ const FileBin          = require('file-bin');
 const app              = electron.app;
 const BrowserWindow    = electron.BrowserWindow;
 const emberAppLocation = `file://${__dirname}/dist/index.html`;
+const Menu = electron.Menu;
+const Tray = electron.Tray;
 
 let mainWindow = null;
 let filesystem = new FileBin(__dirname + '/notes', ['.txt', '.md', '.markdown']);
+let appIcon = null;
 
 electron.crashReporter.start();
 
@@ -26,6 +29,15 @@ app.on('ready', function onReady() {
     titleBarStyle: 'hidden-inset'
   });
 
+  appIcon = new Tray('./app/assets/black-sushi.png');
+   var contextMenu = Menu.buildFromTemplate([
+     { label: 'HAY STEVE', type: 'radio' },
+     { label: 'How cool is this?', type: 'radio' }
+   ]);
+
+   appIcon.setToolTip('This is my application.');
+   appIcon.setContextMenu(contextMenu);
+
   delete mainWindow.module;
 
   mainWindow.loadURL(emberAppLocation);
@@ -40,3 +52,14 @@ app.on('ready', function onReady() {
 });
 
 exports.filesystem = filesystem;
+
+const updateMenu = exports.updateMenu = (notes) => {
+  let noteMenuItems = notes.map(note => {
+    return { label: node.id, click: function() {
+      mainWindow.webContents.send('note-selected', note.id);
+    } };
+  });
+
+  let contextMenu = Menu.buildFromTemplate(noteMenuItems);
+  appIcon.setContextMenu(contextMenu);
+}
