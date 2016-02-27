@@ -12,7 +12,7 @@ Clone repository and install dependencies:
 
 ```
 $ git clone git@github.com:acareaga/itamae.git
-$ cd tetris
+$ cd itamae
 $ npm install
 ```
 
